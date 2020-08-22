@@ -1,0 +1,58 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+  </style>
+
+  <link rel="stylesheet" href="/lightbox.min.css" />
+  <script src="/lightbox-plus-jquery.min.js" charset="utf-8"></script>
+
+
+  {%- seo title=false -%}
+    <title>
+      {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+      {%if paginator and paginator.page!=1 %} - page {{ paginator.page }}{% endif %}
+    </title>
+
+  <style>
+  {% include style.css %}
+  </style>
+
+  {%- if jekyll.environment == "production" -%}
+  {%- endif -%}
+
+</head>
+
+
+<body>
+<div id="wrap">
+  {%- include header.html -%}
+
+  {{ content }}
+</div>
+
+</body>
+
+{% include footer.html %}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175474654-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-175474654-1');
+</script>
+
+</html>

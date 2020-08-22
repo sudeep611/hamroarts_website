@@ -1,0 +1,30 @@
+<div id="header">
+  <div class="logo-menu-header">
+    <a href="/"><img height="100px" src="/assets/images/stinkfooarts_logo.png" alt="LOGO" /></a>
+  </div>
+
+  <nav>
+      <ul>
+        {% if page.url == "/" %}
+          <li><a class="active-link" href="/">Portrait</a></li>
+        {% else %}
+          <li><a href="/">Portrait</a></li>
+        {% endif %}
+
+        {% if page.url == "/wall-painting/" %}
+          <li><a class="active-link" href="/wall-painting">Wall Painting</a></li>
+        {% else %}
+          <li><a href="/wall-painting/">Wall Painting</a></li>
+        {% endif %}
+
+        {% if page.url == "/contact/" %}
+          <li><a class="active-link" href="/contact/">Contact</a></li>
+        {% else %}
+          <li><a href="/contact/">Contact</a></li>
+        {% endif %}
+        <li><a class="social-icon" href="https://instagram.com/StinkFooArts"><img height="20px" src="/assets/images/instagram_icon.png" /></a></li>
+        <li><a class="social-icon" href="https://facebook.com/StinkFooArts"><img height="20px" src="/assets/images/facebook_icon.png" /></a></li>
+      </ul>
+  </nav>
+
+</div>
